@@ -23,3 +23,8 @@ WHERE area > 3000000 OR population > 250000000
 -- Divide by 1000000 (6 zeros) for millions. Divide by 1000000000 (9 zeros) for billions.
 SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2) FROM world
 WHERE continent = 'South America'
+-- Greece has capital Athens.
+-- Each of the strings 'Greece', and 'Athens' has 6 characters.
+-- Show the name and capital where the name and the capital have the same number of characters.
+SELECT name, capital FROM world
+ WHERE LEN(name) = LEN(CAPITAL)
