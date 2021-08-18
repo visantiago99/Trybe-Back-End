@@ -12,3 +12,5 @@ SELECT Piece, Price FROM provides
 WHERE Provider = 'HAL'
 ORDER BY Price DESC;
 -- Escreva uma query para exibir por quantas empresas a peça 1 é provida.
+SELECT COUNT(Provider) FROM provides
+WHERE Piece = 1;
