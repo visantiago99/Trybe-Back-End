@@ -8,4 +8,7 @@ ORDER BY Price DESC LIMIT 5;
 SELECT Provider, Price FROM provides
 ORDER BY Price DESC LIMIT 4 OFFSET 2
 -- Escreva uma query para exibir todas as informações das peças que são providas pela empresa HAL . Ordene o resultado pelos preços das peças de forma decrescente.
+SELECT Piece, Price FROM provides
+WHERE Provider = 'HAL'
+ORDER BY Price DESC;
 -- Escreva uma query para exibir por quantas empresas a peça 1 é provida.
