@@ -5,6 +5,8 @@ WHERE title LIKE '%ace%';
 SELECT * FROM sakila.film
 WHERE description LIKE '%china';
 -- Mostre todos os detalhes dos dois filmes cujas descrições contêm a palavra girl e o título finaliza com a palavra lord .
+SELECT * FROM sakila.film
+WHERE description LIKE '%girl%' AND title LIKE '%lord';
 -- Mostre os dois casos em que, a partir do 4° caractere no título do filme, tem-se a palavra gon .
 -- Mostre o único caso em que, a partir do 4° caractere no título do filme, tem-se a palavra gon e a descrição contém a palavra Documentary .
 -- Mostre os dois filmes cujos títulos ou finalizam com academy ou iniciam com mosquito .
