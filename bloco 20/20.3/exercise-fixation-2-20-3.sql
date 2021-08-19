@@ -11,5 +11,7 @@ WHERE description LIKE '%girl%' AND title LIKE '%lord';
 SELECT * FROM sakila.film
 WHERE title LIKE '___gon%';
 -- Mostre o único caso em que, a partir do 4° caractere no título do filme, tem-se a palavra gon e a descrição contém a palavra Documentary .
+SELECT * FROM sakila.film
+WHERE title LIKE '___gon%' AND description LIKE '%Documentary%';
 -- Mostre os dois filmes cujos títulos ou finalizam com academy ou iniciam com mosquito .
 -- Mostre os seis filmes que contêm as palavras monkey e sumo em suas descrições.
