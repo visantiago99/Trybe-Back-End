@@ -14,3 +14,6 @@ SELECT title, release_year, rental_duration FROM sakila.film
 WHERE rental_duration BETWEEN 3 AND 6
 ORDER BY rental_duration DESC, title;
 -- Monte um relatório que exiba o título e classificação dos 500 primeiros filmes direcionados para as classificações indicativas G, PG e PG-13 . Os resultados devem estar ordenados por título.
+SELECT title, rating FROM sakila.film
+WHERE rating IN('G', 'PG', 'PG-13')
+ORDER BY title LIMIT 500
