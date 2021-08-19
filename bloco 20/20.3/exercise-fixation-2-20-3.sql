@@ -17,3 +17,5 @@ WHERE title LIKE '___gon%' AND description LIKE '%Documentary%';
 SELECT * FROM sakila.film
 WHERE title LIKE '%academy' OR title LIKE 'mosquito%';
 -- Mostre os seis filmes que contêm as palavras monkey e sumo em suas descrições.
+SELECT * FROM sakila.film
+WHERE description LIKE '%monkey%' AND description LIKE '%sumo%';
