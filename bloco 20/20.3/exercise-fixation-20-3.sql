@@ -9,5 +9,7 @@ SELECT title, description, release_year, replacement_cost FROM sakila.film
 WHERE rating <> 'NC-17'
 ORDER BY replacement_cost DESC, title LIMIT 100;
 -- Quantos clientes estão ativos e na loja 1 ?
+SELECT COUNT(first_name) FROM sakila.customer
+WHERE active = 1 AND store_id = 1;
 -- Mostre todos os detalhes dos clientes que não estão ativos na loja 1 .
 -- Precisamos descobrir quais são os 50 filmes feitos apenas para adultos com a menor taxa de aluguel, para que possamos fazer uma divulgação melhor desses filmes. Em caso de empate, ordene em ordem alfabética pelo título.
