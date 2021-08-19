@@ -15,3 +15,6 @@ WHERE active = 1 AND store_id = 1;
 SELECT * FROM sakila.customer
 WHERE active = 0;
 -- Precisamos descobrir quais são os 50 filmes feitos apenas para adultos com a menor taxa de aluguel, para que possamos fazer uma divulgação melhor desses filmes. Em caso de empate, ordene em ordem alfabética pelo título.
+SELECT * FROM sakila.film
+WHERE rating = 'NC-17'
+ORDER BY (rental_duration * rental_rate), title;
