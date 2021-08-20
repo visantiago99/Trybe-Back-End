@@ -17,3 +17,5 @@ INSERT INTO sakila.actor (first_name, last_name)
 INSERT INTO sakila.category(name)
 VALUES('XABLAU'), ('VICTOR'), ('SANTIAGO')
 -- Cadastre uma nova loja na tabela sakila.store .
+INSERT INTO sakila.store(manager_staff_id, address_id)
+VALUES(4, 2)
