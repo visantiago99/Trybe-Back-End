@@ -11,5 +11,7 @@ VALUES
 ('xablau', 'xablozo', 5, 'xablz@gmail.com', 1, 1, 'xau', 'senhaxau'),
 ('senior', 'sessoro', 6, 'saudozo@gmail.com', 1, 5, 'seseirei', 'senhasenso');
 -- Selecione os cinco primeiros nomes e sobrenomes da tabela sakila.customer e cadastre essas pessoas como atores na tabela sakila.actor .
+INSERT INTO sakila.actor (first_name, last_name)
+    SELECT first_name, last_name FROM sakila.customer LIMIT 5;
 -- Cadastre três categorias de uma vez só na tabela sakila.category .
 -- Cadastre uma nova loja na tabela sakila.store .
