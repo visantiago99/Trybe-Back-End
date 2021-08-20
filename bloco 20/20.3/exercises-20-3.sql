@@ -2,6 +2,9 @@
 SELECT * FROM pecasfornecedores.pecas
 WHERE name LIKE 'GR%';
 -- Escreva uma query para exibir todos os fornecimentos que contenham a peça com code 2 . Organize o resultado por ordem alfabética de fornecedor.
+SELECT * FROM pecasfornecedores.fornecimentos
+WHERE peca = 2
+ORDER BY Fornecedor
 -- Escreva uma query para exibir as peças, preço e fornecedor de todos os fornecimentos em que o código do fornecedor tenha a letra N .
 -- Escreva uma query para exibir todas as informações dos fornecedores que são empresas limitadas (LTDA). Ordene os resultados em ordem alfabética decrescente.
 -- Escreva uma query para exibir o número de empresas (fornecedores) que contém a letra F no código.
