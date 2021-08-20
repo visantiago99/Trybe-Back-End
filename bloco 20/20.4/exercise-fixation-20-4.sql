@@ -14,4 +14,6 @@ VALUES
 INSERT INTO sakila.actor (first_name, last_name)
     SELECT first_name, last_name FROM sakila.customer LIMIT 5;
 -- Cadastre três categorias de uma vez só na tabela sakila.category .
+INSERT INTO sakila.category(name)
+VALUES('XABLAU'), ('VICTOR'), ('SANTIAGO')
 -- Cadastre uma nova loja na tabela sakila.store .
