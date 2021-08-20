@@ -16,4 +16,6 @@ ORDER BY name DESC
 SELECT COUNT(*) FROM pecasfornecedores.fornecedores
 WHERE code LIKE '%F%'
 -- Escreva uma query para exibir os fornecimentos onde as peças custam mais de R$15,00 e menos de $40,00 . Ordene os resultados por ordem crescente.
+SELECT * FROM pecasfornecedores.fornecimentos
+WHERE Preco BETWEEN 15 AND 40
 -- Escreva uma query para exibir o número de vendas feitas entre o dia 15/04/2018 e o dia 30/07/2019 .
