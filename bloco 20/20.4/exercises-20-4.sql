@@ -12,6 +12,9 @@ VALUES ('Monstros SA', 'Pete Docter', '2001', 92),
 INSERT INTO pixar.boxoffice(movie_id, rating, domestic_sales, international_sales)
 VALUES(9, 6.8, 450000000, 370000000);
 -- Exercício 3 : O diretor do filme "Procurando Nemo" está incorreto, na verdade ele foi dirigido por Andrew Staton. Corrija esse dado utilizando o UPDATE .
+UPDATE pixar.movies
+SET director = 'Andrew Staton'
+WHERE id = 9;
 -- Exercício 4 : O título do filme "Ratatouille" esta escrito de forma incorreta na tabela Movies , além disso, o filme foi lançado em 2007 e não em 2010. Corrija esses dados utilizando o UPDATE .
 -- Exercício 5 : Insira as novas classificações abaixo na tabela BoxOffice , lembre-se que a coluna movie_id é uma foreign key referente a coluna id da tabela Movies :
 -- Monsters SA, classificado em 8.5, lucrou 300 milhões no mercado interno e 250 milhões no mercado internacional.
