@@ -3,4 +3,4 @@ SELECT IF(15 MOD 2 <> 0, 'Ímpar', 'Par') AS 'Par ou Ímpar';
 -- Temos uma sala de cinema que comporta 220 pessoas. Quantos grupos completos de 12 pessoas podemos levar ao cinema sem que ninguém fique de fora?
 SELECT 220 DIV 12;
 -- Utilizando o resultado anterior, responda à seguinte pergunta: temos lugares sobrando? Se sim, quantos?
-SELECT 220 MOD 12
+SELECT 220 MOD 12;
