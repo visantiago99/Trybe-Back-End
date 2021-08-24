@@ -7,3 +7,11 @@ AS 'conheço o filme?' FROM sakila.film;
 -- PG-13: "Não recomendado para menores de 13 anos";
 -- R: "Não recomendado para menores de 17 anos";
 -- Se não cair em nenhuma das classificações anteriores: "Proibido para menores de idade".
+SELECT title, rating, CASE
+WHEN rating = 'G' THEN 'Livre para todos'
+WHEN rating = 'PG' THEN 'Não recomendado para menores de 10 anos'
+WHEN rating = 'PG-13' THEN 'Não recomendado para menores de 13 anos'
+WHEN rating = 'R' THEN 'não recomendado para menores de 17 anos'
+ELSE 'Proibido para menores de idade'
+END AS 'publico_alvo'
+FROM sakila.film;
