@@ -12,3 +12,9 @@ ORDER BY avg_rental DESC;
 SELECT district, COUNT(district) FROM sakila.address
 GROUP BY district 
 ORDER BY COUNT(district) DESC;
+-- Usando a query a seguir, exiba apenas as durações médias que estão entre 115.0 a 121.50. Além disso, dê um alias (apelido) à coluna gerada por AVG(length) , de forma que deixe a query mais legível. Finalize ordenando os resultados de forma decrescente.
+    SELECT rating, AVG(length) AS avg_duration
+    FROM sakila.film
+    GROUP BY rating
+    HAVING avg_duration BETWEEN 112.0 AND 121.50
+    ORDER BY avg_duration DESC;
