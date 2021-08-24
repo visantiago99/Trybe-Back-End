@@ -9,3 +9,6 @@ SELECT rating, AVG(rental_duration) AS avg_rental FROM sakila.film
 GROUP BY rating
 ORDER BY avg_rental DESC;
 -- Monte uma query para a tabela sakila.address que exiba o nome do distrito e a quantidade de endereços registrados nele. Os resultados devem ser ordenados da maior quantidade para a menor.
+SELECT district, COUNT(district) FROM sakila.address
+GROUP BY district 
+ORDER BY COUNT(district) DESC;
