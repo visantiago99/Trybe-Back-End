@@ -38,3 +38,9 @@ ON A.staff_id = B.staff_id
 WHERE B.payment_date LIKE '%2006%'
 GROUP BY A.first_name;
 -- Monte uma query que exiba o id do ator , nome , id do filme e título do filme , usando as tabelas actor , film_actor e film . Dica: você precisará fazer mais de um JOIN na mesma query
+SELECT A.actor_id, A.first_name, B.film_id, C.title
+FROM sakila.actor AS A
+INNER JOIN sakila.film_actor AS B
+ON A.actor_id = B.actor_id
+INNER JOIN sakila.film AS C
+ON B.film_id = C.film_id;
