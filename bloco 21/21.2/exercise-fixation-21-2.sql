@@ -12,8 +12,16 @@ ON A.address_id = B.address_id;
 SELECT B.customer_id, B.first_name, B.email, B.address_id, A.address
 FROM sakila.address AS A
 INNER JOIN sakila.customer AS B
-ON A.address_id = B.address_id;
+ON A.address_id = B.address_id
+ORDER BY B.first_name DESC
+LIMIT 100;
 -- Exiba o nome , email , id do endereço , endereço e distrito dos clientes que moram no distrito da California e que contêm "rene" em seus nomes. As informações podem ser encontradas nas tabelas address e customer .
+SELECT A.first_name, A.last_name, A.address_id, B.address, B.district
+FROM sakila.customer AS A
+INNER JOIN sakila.address AS B
+ON A.address_id = B.address_id
+WHERE B.district = 'California'
+AND A.first_name LIKE '%rene%';
 -- Exiba o nome e a quantidade de endereços dos clientes cadastrados. Ordene seus resultados por nomes de forma decrescente. Exiba somente os clientes ativos. As informações podem ser encontradas na tabela address e customer .
 -- Monte uma query que exiba o nome , sobrenome e a média de valor ( amount ) paga aos funcionários no ano de 2006. Use as tabelas payment e staff . Os resultados devem estar agrupados pelo nome e sobrenome do funcionário.
 -- Monte uma query que exiba o id do ator , nome , id do filme e título do filme , usando as tabelas actor , film_actor e film . Dica: você precisará fazer mais de um JOIN na mesma query
