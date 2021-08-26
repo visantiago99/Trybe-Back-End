@@ -78,3 +78,19 @@ DELIMITER ;
 
 SELECT GetCorrespondingFilm(2);
 -- Crie uma function que receba uma determinada categoria de filme em formato de texto (ex: 'Action' , 'Horror' ) e retorna a quantidade total de filmes registrados nessa categoria.
+USE sakila;
+DELIMITER $$
+CREATE FUNCTION ReturnMovieQuant(categoria VARCHAR(50))
+RETURNS VARCHAR(50) READS SQL DATA
+BEGIN
+DECLARE quantity INT;
+SELECT COUNT(A.film_id) FROM sakila.film_category AS A
+INNER JOIN sakila.category AS B
+ON A.category_id = B.category_id
+WHERE B.name = categoria
+INTO quantity;
+RETURN quantity;
+END $$
+DELIMITER ;
+
+SELECT ReturnMovieQuant('Documentary');
