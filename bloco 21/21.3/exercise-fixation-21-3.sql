@@ -27,3 +27,19 @@ DELIMITER ;
 
 CALL ShowMovies('action');
 -- Monte uma procedure que receba o email de um cliente como parâmetro de entrada e diga se o cliente está ou não ativo, através de um parâmetro de saída.
+USE sakila;
+DELIMITER $$
+CREATE PROCEDURE ShowActives(
+	IN emailClient VARCHAR(300),
+    OUT activeEmails VARCHAR(300)
+)
+BEGIN 
+SELECT IF(active = 1, 'Email ativo', 'Email inativo')
+INTO activeEmails FROM sakila.customer
+WHERE email = emailClient;
+END $$
+DELIMITER ;
+
+SELECT @activeEmails;
+CALL ShowActives('MARY.SMITH@sakilacustomer.org', @activeEmails);
+SELECT @activeEmails;
