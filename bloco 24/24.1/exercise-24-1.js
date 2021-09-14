@@ -53,5 +53,9 @@ db.class.updateOne(
   },
 );
 // Exercício 11 : Utilizando uma única operação, crie um campo chamado sequels e atribua a ele o valor 0 em todos os documentos.
+db.class.updateMany(
+  {},
+  {$set: {sequels: 0}}
+  );
 // Exercício 12 : Utilizando uma única operação, remova os campos budget e estimatedBudget em todos os documentos.
 // Exercício 13 : Para os filmes Batman ou Home Alone , atribua a imdbRating o valor 17 , caso o valor de imdbRating seja menor que 17 .
