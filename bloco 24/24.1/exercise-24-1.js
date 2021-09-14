@@ -14,6 +14,10 @@ db.class.updateOne(
   {$set: {budget: 15, imdbRating: 5.5}}
   );
 // Exercício 4 : Aumente em 2 o imdbRating do filme Batman .
+db.class.updateOne(
+  {title: "Batman"},
+  {$inc: {imdbRating: 2}}
+  );
 // Exercício 5 : Aumente em 5 o budget do filme Home Alone .
 // Exercício 6 : Multiplique por 4 o imdbRating do filme Batman .
 // Exercício 7 : Renomeie o campo budget para estimatedBudget do filme Batman .
