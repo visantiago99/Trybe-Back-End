@@ -4,6 +4,12 @@ db.class.updateOne(
   {$push: {category: "superhero"}}
   );
 // Exercício 2: Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman .
+db.class.updateOne(
+  {title: "Batman"},
+  {$push: {category: {
+    $each: ["villain", "comic-based"]
+  }}}
+  );
 // Exercício 3: Remova a categoria "action" do filme Batman .
 // Exercício 4: Remova o primeiro elemento do array category do filme Batman .
 // Exercício 5: Remova o último elemento do array category do filme Batman .
